@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Discover Vietnam - Essentials & Cultural Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script async src="scripts/main.js"></script>
+  </head>
+  <body>
+    <header class="header-container">
+      <h1 id="welcome-heading">Welcome to Vietnam</h1>
+      <button id="user-btn">Change user</button>
+    </header>
+
+    <main class="main-content">
+      <!-- HERO IMAGE WITH CLICK TOGGLE FEATURE -->
+      <div class="image-wrapper">
+        <img
+          id="hero-img"
+          src="images/Vietnam Nature.jpg"
+          alt="A scenic view of Vietnam featuring lush green rice terraces and mountains."
+        />
+        <p class="img-hint">💡 <em>Click on the image above to toggle between Nature and Culture views!</em></p>
+      </div>
+
+      <!-- ABOUT VIETNAM SECTION -->
+      <section class="intro-section">
+        <p>
+          Vietnam is a country rich in cultural heritage, captivating visitors with its:
+        </p>
+
+        <ul>
+          <li>Rich and flavorful cuisine</li>
+          <li>Thousands of years of heroic history</li>
+          <li>Warm and welcoming people</li>
+        </ul>
+
+        <p>
+          Vietnamese cuisine is world-renowned for its harmonious balance of fresh
+          ingredients and spices, highlighted by iconic dishes such as Pho, Banh Mi,
+          and Egg Coffee. Alongside its culinary traditions, thousands of years of
+          nation-building and defense have forged a resilient and unique national
+          identity.
+        </p>
+
+        <p>
+          Visit the official
+          <a href="https://vietnam.travel/" target="_blank" rel="noopener">Vietnam Tourism Board</a>
+          to learn even more about the incredible destinations and cultural experiences awaiting you.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- TRAVEL ESSENTIALS SEARCH APP -->
+      <section class="essentials-app">
+        <h2>🇻🇳 Essential Tourist Finder</h2>
+        <p class="app-subtitle">Search for hospitals, SIM cards, ATMs, taxis, emergency numbers & more!</p>
+
+        <!-- SEARCH BAR -->
+        <div class="search-box">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Type to search (e.g., hospital, SIM, ATM, Grab, Embassy, plug)..."
+          />
+        </div>
+
+        <!-- CATEGORY FILTERS -->
+        <div class="filter-tags" id="filter-tags">
+          <button class="tag active" data-category="all">All</button>
+          <button class="tag" data-category="emergency">🚨 Emergency</button>
+          <button class="tag" data-category="medical">🏥 Medical</button>
+          <button class="tag" data-category="sim">📱 SIM & Internet</button>
+          <button class="tag" data-category="money">💵 Money & ATM</button>
+          <button class="tag" data-category="transport">🚕 Transport</button>
+          <button class="tag" data-category="general">🔌 Plugs & Culture</button>
+        </div>
+
+        <!-- RESULTS GRID -->
+        <div class="results-grid" id="results-container">
+          <!-- Items populated dynamically via JS -->
+        </div>
+
+        <!-- CURRENCY CONVERTER TOOL -->
+        <div class="tool-card currency-card">
+          <h3>💱 Quick Currency Converter</h3>
+          <div class="converter-inputs">
+            <input type="number" id="foreign-amount" value="100" min="0" />
+            <select id="foreign-currency">
+              <option value="USD" data-rate="25400">USD ($)</option>
+              <option value="EUR" data-rate="27000">EUR (€)</option>
+              <option value="GBP" data-rate="32000">GBP (£)</option>
+              <option value="AUD" data-rate="16500">AUD (A$)</option>
+              <option value="JPY" data-rate="165">JPY (¥)</option>
+              <option value="KRW" data-rate="18.5">KRW (₩)</option>
+            </select>
+            <span>≈</span>
+            <div id="vnd-result" class="vnd-result">2,540,000 VND</div>
+          </div>
+        </div>
+
+        <!-- ESSENTIAL PHRASEBOOK WITH AUDIO -->
+        <div class="tool-card phrasebook-card">
+          <h3>🗣️ Essential Vietnamese Phrases</h3>
+          <ul class="phrase-list">
+            <li>
+              <span><strong>Xin chào</strong> (Hello)</span>
+              <button class="speech-btn" onclick="speakText('Xin chào')">🔊 Listen</button>
+            </li>
+            <li>
+              <span><strong>Cảm ơn</strong> (Thank you)</span>
+              <button class="speech-btn" onclick="speakText('Cảm ơn')">🔊 Listen</button>
+            </li>
+            <li>
+              <span><strong>Bao nhiêu tiền?</strong> (How much is it?)</span>
+              <button class="speech-btn" onclick="speakText('Bao nhiêu tiền?')">🔊 Listen</button>
+            </li>
+            <li>
+              <span><strong>Tính tiền</strong> (Check, please!)</span>
+              <button class="speech-btn" onclick="speakText('Tính tiền')">🔊 Listen</button>
+            </li>
+            <li>
+              <span><strong>Cứu tôi với!</strong> (Help me!)</span>
+              <button class="speech-btn" onclick="speakText('Cứu tôi với!')">🔊 Listen</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
