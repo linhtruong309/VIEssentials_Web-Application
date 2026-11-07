@@ -4,6 +4,14 @@ An interactive, responsive single-page web application designed for internationa
 
 🚀 **Live Demo:** https://linhtruong309.github.io/VIEssentials_Web-Application/
 
+
+## 📸 Screenshots
+
+
+| Home                          | Tourist Finder                    | Tools                           |
+| ------------------------------- | ----------------------------------- | --------------------------------- |
+| ![Home](screenshots/home.png) | ![Finder](screenshots/finder.png) | ![Tools](screenshots/tools.png) |
+
 ## 🖥️ Run locally
 
 ```bash
