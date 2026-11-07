@@ -1,4 +1,4 @@
-// 1. IMAGE TOGGLE LOGIC (FROM YOUR ORIGINAL CODE)
+// 1. IMAGE TOGGLE LOGIC 
 const myImage = document.querySelector('#hero-img');
 
 if (myImage) {
@@ -12,25 +12,28 @@ if (myImage) {
   });
 }
 
-// 2. USERNAME & LOCALSTORAGE LOGIC (FROM YOUR ORIGINAL CODE)
+// 2. USERNAME & LOCALSTORAGE LOGIC 
 const myButton = document.querySelector('#user-btn');
 const myHeading = document.querySelector('#welcome-heading');
 
-function setUserName() {
-  const myName = prompt('Please enter your name.');
-  if (!myName) {
-    setUserName();
-  } else {
-    localStorage.setItem('name', myName);
-    myHeading.textContent = `Welcome to Vietnam, ${myName}`;
-  }
+function showGreeting(name) {
+  myHeading.textContent = name ? `Welcome to Vietnam, ${name}` : 'Welcome to Vietnam';
 }
 
-if (!localStorage.getItem('name')) {
-  setUserName();
-} else {
+function setUserName() {
+  const myName = (prompt('Please enter your name.') || '').trim();
+  if (!myName) return; // cancelled or empty: keep the current greeting, no re-prompt loop
+  localStorage.setItem('name', myName);
+  showGreeting(myName);
+}
+
+if (myHeading) {
   const storedName = localStorage.getItem('name');
-  myHeading.textContent = `Welcome to Vietnam, ${storedName}`;
+  if (storedName) {
+    showGreeting(storedName);
+  } else {
+    setUserName();
+  }
 }
 
 if (myButton) {
@@ -117,8 +120,12 @@ function renderCards(filterText = '') {
     return matchesCategory && matchesSearch;
   });
 
-  if (filteredData.length === 0) {
-    resultsContainer.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #777;">No results found for "${filterText}". Try searching for 'hospital', 'SIM', or 'ATM'.</p>`;
+    if (filteredData.length === 0) {
+    const empty = document.createElement('p');
+    empty.style.cssText = 'grid-column: 1/-1; text-align: center; color: #777;';
+    // textContent (not innerHTML) so typed text can never be interpreted as HTML
+    empty.textContent = `No results found for "${filterText}". Try searching for 'hospital', 'SIM', or 'ATM'.`;
+    resultsContainer.appendChild(empty);
     return;
   }
 
