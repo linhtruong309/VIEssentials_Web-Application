@@ -44,11 +44,17 @@ open index.html   # macOS; or just double-click the file. No build step or depen
 
 ```text
 ├── index.html
+├── README.md
+├── .gitignore
 ├── styles/
 │   └── style.css
 ├── scripts/
 │   └── main.js
-└── images/
-    ├── Vietnam Nature.jpeg
-    └── Vietnam Culture.jpeg
+├── images/
+│   ├── Vietnam Nature.jpeg
+│   └── Vietnam Culture.jpeg
+└── screenshots/
+    ├── home.png
+    ├── finder.png
+    └── tools.png
 ```
