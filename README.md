@@ -3,7 +3,7 @@
 
 An interactive, responsive single-page web application designed for international tourists visiting Vietnam. The app offers real-time search for essential tourist services, language/audio learning tools, currency conversion, and cultural insights.
 
-🚀 **Live Demo:** [https://your-username.github.io/vietnam-travel-essentials/](https://your-username.github.io/vietnam-travel-essentials/)
+🚀 **Live Demo:** [https://your-username.github.io/vietnam-travel-essentials/](https://linhtruong309.github.io/vietnam-travel-essentials/)
 
 ---
 
