@@ -7,10 +7,17 @@ An interactive, responsive single-page web application designed for internationa
 
 ## 📸 Screenshots
 
+**Home**
 
-| Home                          | Tourist Finder                    | Tools                           |
-| ------------------------------- | ----------------------------------- | --------------------------------- |
-| ![Home](screenshots/home.png) | ![Finder](screenshots/finder.png) | ![Tools](screenshots/tools.png) |
+![Home](screenshots/home.png)
+
+**Tourist Finder**
+
+![Tourist Finder](screenshots/finder.png)
+
+**Currency Converter & Phrasebook**
+
+![Tools](screenshots/tools.png)
 
 ## 🖥️ Run locally
 
